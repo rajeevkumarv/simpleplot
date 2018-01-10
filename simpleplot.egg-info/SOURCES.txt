@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+examples/__init__.py
+examples/test_multiline_plot.py
+examples/test_plot_with_singleline.py
+examples/test_scatter_plot.py
+simpleplot/__init__.py
+simpleplot/lineplot.py
+simpleplot/scatter_plot.py
+simpleplot.egg-info/PKG-INFO
+simpleplot.egg-info/SOURCES.txt
+simpleplot.egg-info/dependency_links.txt
+simpleplot.egg-info/requires.txt
+simpleplot.egg-info/top_level.txt

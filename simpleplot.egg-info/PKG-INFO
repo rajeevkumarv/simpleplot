@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: simpleplot
+Version: 1.0
+Summary: A wrapper over matplotlib to further simplify plotting
+Home-page: http://linkedin.com/in/rajeevkumarv/
+Author: Rajeev Kumar Verma
+Author-email: UNKNOWN
+License:  Rajeev Kumar Verma, 2018
+Description-Content-Type: UNKNOWN
+Description: Python module to simplify plotting
+Keywords: matplot based simple plotting
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning Development Status
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Software Development :: Testing

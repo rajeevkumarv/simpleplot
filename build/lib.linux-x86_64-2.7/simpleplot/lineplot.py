@@ -21,22 +21,23 @@ class MultiLinePlot:
         self.x = xdata
         self.y = ydata
         self.line = self.ax.plot(self.x, self.y)
+        len(self.x), len(self.line)
         self.init()
 
-    def set_xylimit(self, xmin, xmax, ymin, ymax):
+    def set_xylimit(self, x_min, x_max, y_min, y_max):
         self.lock.acquire()
-        self.ax.set_xlim(xmin, xmax)
-        self.ax.set_ylim(ymin, ymax)
+        self.ax.set_xlim(x_min, x_max)
+        self.ax.set_ylim(y_min, y_max)
         self.lock.release()
 
-    def set_xlimit(self, xmin, xmax):
+    def set_xlimit(self, x_min, x_max):
         self.lock.acquire()
-        self.ax.set_xlim(xmin, xmax)
+        self.ax.set_xlim(x_min, x_max)
         self.lock.release()
 
-    def set_ylimit(self, ymin, ymax):
+    def set_ylimit(self, y_min, y_max):
         self.lock.acquire()
-        self.ax.set_ylim(ymin, ymax)
+        self.ax.set_ylim(y_min, y_max)
         self.lock.release()
 
     def set_ydata(self, ydata):
@@ -85,17 +86,18 @@ class MultiLinePlot:
     # Init only required for blitting to give a clean slate.
     def init(self):
         for i in range(0, len(self.line)):
-            print(i, len(self.line))
+            i, len(self.line)
             # self.line[i].set_ydata(self.y[0,:])
         return self.line,
 
     # noinspection PyUnusedLocal
     def run_anim(self):
-        ani = animation.FuncAnimation(self.fig, self.animate, np.arange(1, 200).data, interval=25, blit=self.blit)
-        plt.show()
+        ani = animation.FuncAnimation(self.fig, self.animate, np.arange(1, 200).data,
+                                      interval=25, blit=self.blit)
+        plt.show(block=False)
 
     @staticmethod
-    def show():
+    def wait():
         plt.show()
 
 
@@ -106,7 +108,7 @@ class LinePlot:
         self.fig, self.ax = plt.subplots()
         self.x = xdata
         self.y = ydata
-        self.line, = self.ax.plot(self.x, self.y, marker='x')
+        self.line, = self.ax.plot(self.x, self.y)
         self.init()
         self.lock = Lock()
 
@@ -158,9 +160,10 @@ class LinePlot:
 
     # noinspection PyUnusedLocal
     def run_anim(self):
-        ani = animation.FuncAnimation(self.fig, self.animate, np.arange(1, 200).data, interval=25, blit=self.blit)
-        plt.show()
+        ani = animation.FuncAnimation(self.fig, self.animate, np.arange(1, 200).data,
+                                      interval=25, blit=self.blit)
+        plt.show(block=False)
 
     @staticmethod
-    def show():
+    def wait():
         plt.show()
