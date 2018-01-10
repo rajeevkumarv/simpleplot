@@ -106,7 +106,7 @@ class LinePlot:
         self.fig, self.ax = plt.subplots()
         self.x = xdata
         self.y = ydata
-        self.line, = self.ax.plot(self.x, self.y, marker='x')
+        self.line, = self.ax.plot(self.x, self.y)
         self.init()
         self.lock = Lock()
 
