@@ -91,7 +91,7 @@ class MultiLinePlot:
 
     # noinspection PyUnusedLocal
     def run_anim(self):
-        ani = animation.FuncAnimation(self.fig, self.animate, np.arange(1, 200).data, interval=25, blit=self.blit)
+        ani = animation.FuncAnimation(self.fig, self.animate, np.arange(1, 200).data, interval=100, blit=self.blit)
         plt.show()
 
     @staticmethod
@@ -158,7 +158,7 @@ class LinePlot:
 
     # noinspection PyUnusedLocal
     def run_anim(self):
-        ani = animation.FuncAnimation(self.fig, self.animate, np.arange(1, 200).data, interval=25, blit=self.blit)
+        ani = animation.FuncAnimation(self.fig, self.animate, np.arange(1, 200).data, interval=100, blit=self.blit)
         plt.show()
 
     @staticmethod
